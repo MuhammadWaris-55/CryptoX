@@ -212,9 +212,6 @@ npm run build
 ### Waris
 
 
-
----
-
 ## 🙌 Credits
 
 Designed and Developed by Waris using React, Tailwind CSS, and React Icons.
