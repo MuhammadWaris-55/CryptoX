@@ -84,7 +84,7 @@ function Sparkline({ data, color }) {
           <stop offset="100%" stopColor={color} stopOpacity="0" />
         </linearGradient>
       </defs>
-      
+
       <polygon points={fillPts} fill={`url(#${gradId})`} />
       <polyline points={polyPts} fill="none" stroke={color} strokeWidth="2"
         strokeLinecap="round" strokeLinejoin="round" />
@@ -98,6 +98,7 @@ function Counter({ value, prefix = "", suffix = "" }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const fired = useRef(false);
+
   useEffect(() => {
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting && !fired.current) {
@@ -114,6 +115,7 @@ function Counter({ value, prefix = "", suffix = "" }) {
     if (ref.current) io.observe(ref.current);
     return () => io.disconnect();
   }, [value]);
+
   return <span ref={ref}>{prefix}{count}{suffix}</span>;
 }
 
@@ -138,24 +140,29 @@ export default function CryptoX() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
         * { font-family:'Outfit',sans-serif; box-sizing:border-box; margin:0; padding:0; }
+
         @keyframes floatY {
           0%,100%{transform:translateY(0) rotate(0deg);}
           40%{transform:translateY(-16px) rotate(4deg);}
           70%{transform:translateY(-8px) rotate(-2deg);}
         }
+
         @keyframes pulseGlow {
           0%,100%{opacity:.3;transform:scale(1);}
           50%{opacity:.6;transform:scale(1.1);}
         }
+
         @keyframes slideUp {
           from{opacity:0;transform:translateY(28px);}
           to{opacity:1;transform:translateY(0);}
         }
+
         @keyframes gradShift {
           0%{background-position:0% 50%;}
           50%{background-position:100% 50%;}
           100%{background-position:0% 50%;}
         }
+
         .anim-up{animation:slideUp .7s ease both;}
         .d1{animation-delay:.12s;} .d2{animation-delay:.24s;}
         .d3{animation-delay:.36s;} .d4{animation-delay:.48s;}
@@ -166,20 +173,24 @@ export default function CryptoX() {
           -webkit-background-clip:text;-webkit-text-fill-color:transparent;
           background-clip:text;animation:gradShift 5s ease infinite;
         }
+
         .glass{
           background:linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
           border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(16px);
         }
+
         .btn-p{
           background:linear-gradient(135deg,#7c3aed,#2563eb);
           box-shadow:0 0 28px rgba(124,58,237,.4);transition:all .25s;
           color:#fff;border:none;cursor:pointer;font-family:inherit;font-weight:600;
         }
+
         .btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(124,58,237,.6);}
         .btn-o{
           border:1.5px solid rgba(124,58,237,.55);color:#a78bfa;background:transparent;
           cursor:pointer;transition:all .25s;font-family:inherit;font-weight:600;
         }
+          
         .btn-o:hover{background:rgba(124,58,237,.12);transform:translateY(-2px);}
         .coin-card{transition:all .3s;}
         .coin-card:hover{transform:translateY(-6px);box-shadow:0 24px 64px rgba(0,0,0,.5);}
