@@ -504,7 +504,7 @@ export default function CryptoX() {
                       <stop offset="100%" stopColor="#7c3aed" stopOpacity="0" />
                     </linearGradient>
                   </defs>
-                  
+
                   {[0.25, 0.5, 0.75].map((y, i) => (
                     <line key={i} x1="0" y1={y * 140 + 5} x2="400" y2={y * 140 + 5}
                       stroke="rgba(255,255,255,.05)" strokeWidth="1" />
@@ -568,6 +568,7 @@ export default function CryptoX() {
                   style={{ background: "linear-gradient(135deg,#7c3aed,#2563eb)" }}>X</div>
                 <span className="text-lg font-bold text-white">CryptoX</span>
               </div>
+
               <p className="text-slate-500 text-sm leading-relaxed mb-6 font-light" style={{ maxWidth: 280 }}>
                 The next-generation crypto trading platform built for speed, security, and global scale.
               </p>
@@ -596,10 +597,12 @@ export default function CryptoX() {
 
           {/* Newsletter */}
           <div className="glass rounded-2xl p-6 mb-10 flex flex-col md:flex-row items-center justify-between gap-6">
+
             <div>
               <p className="text-white font-bold mb-1">Stay in the loop</p>
               <p className="text-slate-500 text-sm font-light">Weekly market insights delivered to your inbox.</p>
             </div>
+            
             {subscribed ? (
               <div className="flex items-center gap-2 font-semibold" style={{ color: "#10b981" }}>
                 <FaCheckCircle /> Subscribed!
