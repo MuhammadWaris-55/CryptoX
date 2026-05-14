@@ -89,51 +89,12 @@ npx tailwindcss init -p
 npm install react-icons
 ```
 
-**5. Configure Tailwind**
-
-Update `tailwind.config.js`:
-
-```js
-export default {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-
-**6. Add Tailwind to CSS**
-
-Replace everything in `src/index.css` with:
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-**7. Add the page component**
+**5. Add the page component**
 
 Copy `CryptoX.jsx` into `src/` and update `src/App.jsx`:
 
-```jsx
-import CryptoX from './CryptoX'
 
-export default function App() {
-  return <CryptoX />
-}
-```
-
-**8. Make sure index.css is imported**
-
-In `src/main.jsx`, confirm this line exists:
-
-```js
-import './index.css'
-```
-
-**9. Start the dev server**
+**6. Start the dev server**
 
 ```bash
 npm run dev
@@ -249,4 +210,4 @@ npm run build
 
 ## 🙌 Credits
 
-Built with ❤️ using React, Tailwind CSS, and React Icons.
+Designed and Developed by Waris using React, Tailwind CSS, and React Icons.
