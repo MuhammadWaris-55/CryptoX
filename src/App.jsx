@@ -77,12 +77,14 @@ function Sparkline({ data, color }) {
   const gradId = `sg${color.replace("#", "")}`;
   return (
     <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} className="overflow-visible">
+
       <defs>
         <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={color} stopOpacity="0.25" />
           <stop offset="100%" stopColor={color} stopOpacity="0" />
         </linearGradient>
       </defs>
+      
       <polygon points={fillPts} fill={`url(#${gradId})`} />
       <polyline points={polyPts} fill="none" stroke={color} strokeWidth="2"
         strokeLinecap="round" strokeLinejoin="round" />
