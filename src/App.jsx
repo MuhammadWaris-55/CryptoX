@@ -190,7 +190,7 @@ export default function CryptoX() {
           border:1.5px solid rgba(124,58,237,.55);color:#a78bfa;background:transparent;
           cursor:pointer;transition:all .25s;font-family:inherit;font-weight:600;
         }
-          
+
         .btn-o:hover{background:rgba(124,58,237,.12);transform:translateY(-2px);}
         .coin-card{transition:all .3s;}
         .coin-card:hover{transform:translateY(-6px);box-shadow:0 24px 64px rgba(0,0,0,.5);}
@@ -222,6 +222,7 @@ export default function CryptoX() {
         borderBottom: "1px solid rgba(255,255,255,.06)",
       }}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between" style={{ height: 68 }}>
+
           {/* Logo */}
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-full flex items-center justify-center font-black text-white text-lg"
@@ -496,12 +497,14 @@ export default function CryptoX() {
                 </div>
 
                 <svg viewBox="0 0 400 160" className="w-full" style={{ height: 160 }}>
+
                   <defs>
                     <linearGradient id="cf" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stopColor="#7c3aed" stopOpacity="0.3" />
                       <stop offset="100%" stopColor="#7c3aed" stopOpacity="0" />
                     </linearGradient>
                   </defs>
+                  
                   {[0.25, 0.5, 0.75].map((y, i) => (
                     <line key={i} x1="0" y1={y * 140 + 5} x2="400" y2={y * 140 + 5}
                       stroke="rgba(255,255,255,.05)" strokeWidth="1" />
