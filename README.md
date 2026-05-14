@@ -207,6 +207,12 @@ npm run build
 
 ---
 
+## Author
+
+### Waris
+
+
+
 ---
 
 ## 🙌 Credits
